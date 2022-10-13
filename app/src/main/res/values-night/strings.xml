@@ -2,4 +2,5 @@
 <resources>
     <string name="grid">Grid</string>
     <string name="list">List</string>
+    <string name="word_list_fragment_label">Words That Start With {letter}</string>
 </resources>
