@@ -51,10 +51,10 @@ class LetterListFragment : Fragment() {
             R.id.layout -> {
                 // Sets isLinearLayoutManager (a Boolean) to the opposite value
                 isLinear = !isLinear
+
                 // Sets layout and icon
                 changeLayout()
                 setIcon(item)
-
                 return true
             }
             //  Otherwise, do nothing and use the core event handling
@@ -67,8 +67,8 @@ class LetterListFragment : Fragment() {
     }
 
     private fun changeLayout() {
-        if (isLinear) recyclerView.layoutManager = GridLayoutManager(context, 4)
-        else recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        if (isLinear) recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        else recyclerView.layoutManager = GridLayoutManager(context, 4)
         recyclerView.adapter = LetterAdapter()
     }
 
