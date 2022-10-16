@@ -19,12 +19,12 @@ class NavigationTests {
         val navController = TestNavHostController(
             ApplicationProvider.getApplicationContext()
         )
-        val letterListScenario = launchFragmentInContainer<LetterListFragment>( //
+        val letterListScenario = launchFragmentInContainer<LetterListFragment>(
             themeResId = R.style.Theme_Words
         )
 
         letterListScenario.onFragment { fragment ->
-            navController.setGraph(R.navigation.nav_graph) //
+            navController.setGraph(R.navigation.nav_graph)
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
 
@@ -36,5 +36,4 @@ class NavigationTests {
 
         assertEquals(navController.currentDestination?.id, R.id.wordListFragment)
     }
-
 }
